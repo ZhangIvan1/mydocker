@@ -22,12 +22,12 @@ func main() {
 	cmd := exec.Command(command, args...)
 	// output, err := cmd.Output()
 	cmd.Stdout = os.Stdout
-	cmd.stderr = os.Stderr
+	cmd.Stderr = os.Stderr
 	err:= cmd.Start()
 	if err != nil {
 		fmt.Printf("Err: %v", err)
 		os.Exit(1)
 	}
 
-	//fmt.Println(string(output))
+	// fmt.Println(string(output))
 }
